@@ -1,7 +1,11 @@
+/* TODO: Better function for setting content width, use "wrapper" divs around content but within sections
+(see https://css-tricks.com/full-browser-width-bars/) */
+
 * {
     font-family: roboto, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -10,17 +14,20 @@ ul {
     padding: 0;
 }
 
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #1f2937;
     margin: 0;
+    padding: 10px 15vw; /* see todo */
 }
 
 .logo {
     font-size: 24px;
     color: #f9faf8;
+    font-weight: 900;
 }
 
 header ul {
@@ -30,16 +37,152 @@ header ul {
     color: #e5e7eb;
 }
 
-/*
-This has no effect
-.content {
+
+section {
+    height: 400px;
+    padding: 0 15vw; /* see todo*/
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    background-color: #1f2937;
+    gap: 50px;
+}
+
+h1 {
+    color: #f9faf8;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+h2 {
+    color: #1f2937;
+}
+
+.secondary {
+    color: #e5e7eb;
+}
+
+.main-column {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.main-column button {
+    width: 100px;
+    padding: 5px;
+    background-color: #3882f6;
+    border: none;
+    border-radius: 5px;
+    color: #f9faf8;
+    font-weight: 900;
+}
+
+.main .image {
+    flex: 1;
+    display: flex;
+    background-color: rgb(113, 116, 128);
+    color: #f9faf8;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.information {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+
+.cards {
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.card {
+    width: 150px;
+}
+
+.square {
+    border: #3882f6 solid 3px;
+    border-radius: 15px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+
+.quotes {
+    background-color: #e5e7eb;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.quote {
+    font-size: 36px;
+    font-weight: light;
+    font-style: italic;
+    color: #1f2937;
+}
+
+.quote-name {
+    align-self: flex-end;
+    font-size: 20px;
+    font-weight: 900;
+    color: #1f2937;
+}
+
+.footer {
+    display: flex;
+    color: #f9faf8;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-box {
+    display: flex;
+    background-color: #3882f6;
+    border-radius: 10px;
+    height: 130px;
+    width: 85vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 75px;
+}
+
+.footer-column {
     display: flex;
     flex-flow: column nowrap;
 }
-*/
 
-/* TEMPORARY */
-section {
-    border: solid 2px black;
-    height: 400px;
+.footer button {
+    height: 30px;
+    width: 100px;
+    background-color: #3882f6;
+    color: #f9faf8;
+    font-weight: 900;
+    border: #f9faf8 solid 2px;
+    border-radius: 8px;
+}
+
+.footer-header {
+    font-weight: 900;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2937;
+    color: #e5e7eb;
 }
